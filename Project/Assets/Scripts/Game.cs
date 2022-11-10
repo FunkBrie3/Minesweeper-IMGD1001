@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -96,6 +97,7 @@ public class Game : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)) NewGame();
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("menu");
     }
     public void Reveal()
     {
