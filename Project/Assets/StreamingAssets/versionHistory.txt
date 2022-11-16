@@ -7,7 +7,7 @@ Game Controls:
 [Right Click] to flag a mine
 
 v0.0.1.0s2
-	- 
+	- Added audio effects to game interactions.
 v0.0.1.0s1
 	- Intro screen created.
 	- Credits screen created.

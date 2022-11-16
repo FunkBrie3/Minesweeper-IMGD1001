@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: versionHistory
+  scrollSpeed: 4
 --- !u!4 &491098966
 Transform:
   m_ObjectHideFlags: 0
