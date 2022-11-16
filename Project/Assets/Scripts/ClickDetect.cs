@@ -18,7 +18,7 @@ public class ClickDetect : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-            if (hit != null && hit.collider != null)
+            if (hit.collider != null)
             {
                 switch (hit.collider.gameObject.name)
                 {
@@ -26,10 +26,10 @@ public class ClickDetect : MonoBehaviour
                         SceneManager.LoadScene("game");
                         return;
                     case "buttonCredits":
-                        SceneManager.LoadScene("game");
+                        SceneManager.LoadScene("credits");
                         return;
                     case "buttonHistory":
-                        SceneManager.LoadScene("game");
+                        SceneManager.LoadScene("version");
                         return;
                     case "buttonQuit":
                         Application.Quit();

@@ -1,0 +1,16 @@
+[Esc] to exit back to main menu
+[Up/Down Arrow] to scroll text
+
+Game Controls:
+[R] to restart
+[Left Click] to reveal a tile
+[Right Click] to flag a mine
+
+v0.0.1.0s2
+	- 
+v0.0.1.0s1
+	- Intro screen created.
+	- Credits screen created.
+	- Version history created.
+v0.0.1
+	- Minesweeper functionality added, with board generation and interaction.

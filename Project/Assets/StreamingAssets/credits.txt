@@ -1,0 +1,19 @@
+[Esc] to exit back to main menu
+[Up/Down Arrow] to scroll text
+
+For IMGD1001 at Worcester Polytechnic Institute
+Students:
+	-Eliza Hackler
+	-Brie Higgins
+	-Katherine Tse
+SA:
+	-Daniel Brower
+Professor:
+	-Walt Yarbrough
+
+Base project modified from https://zigurous.com/tutorials
+
+Programming references:
+	-https://stackoverflow.com/questions/60666526/
+	-https://forum.unity.com/threads/192093/
+	-https://www.youtube.com/watch?v=1OOWHB-BOAY

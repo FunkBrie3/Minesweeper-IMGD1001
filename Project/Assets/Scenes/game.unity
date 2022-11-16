@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d0fa3359d75c04bb18863bb9ae9ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  height: 10
-  mineCount: 20
+  width: 15
+  height: 15
+  mineCount: 45
 --- !u!156049354 &1227663978
 Grid:
   m_ObjectHideFlags: 0
@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 1373842653}
   - component: {fileID: 1373842652}
   - component: {fileID: 1373842655}
+  - component: {fileID: 1373842656}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -238,7 +239,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -279,6 +280,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2a5ec1ecc8ebf419d70c8929f9fe60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1373842656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373842651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75604a410c98ee54b88df5d03205bc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2114901190

@@ -1,6 +1,0 @@
-v0.0.1
-	- Minesweeper functionality added, with board generation and interaction.
-v0.0.1.0s1
-	- Intro screen created.
-	- Credits screen created.
-	- Version history created.

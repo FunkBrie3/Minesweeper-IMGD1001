@@ -97,7 +97,6 @@ public class Game : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)) NewGame();
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("menu");
     }
     public void Reveal()
     {
