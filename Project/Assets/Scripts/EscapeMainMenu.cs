@@ -7,6 +7,10 @@ public class EscapeMainMenu : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("menu");
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+            AudioManager.Play(AudioManager.AudioType.Click);
+        }
     }
 }

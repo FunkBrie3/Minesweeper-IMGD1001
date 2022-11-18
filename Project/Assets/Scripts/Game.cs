@@ -26,6 +26,8 @@ public class Game : MonoBehaviour
         GenerateNumbers();
         Camera.main.transform.position = new Vector3(width / 2f, height / 2f, -10);
         board.Draw(state);
+
+        AudioManager.Play(AudioManager.AudioType.Pop);
     }
 
     private void GenerateCells() {
@@ -96,6 +98,8 @@ public class Game : MonoBehaviour
             }
         }
 
+        CheckWin();
+
         if (Input.GetKeyDown(KeyCode.R)) NewGame();
     }
     public void Reveal()
@@ -105,13 +109,15 @@ public class Game : MonoBehaviour
         Cell c = GetCell(cellPos.x, cellPos.y);
         if (c.type == Cell.Type.Invalid || c.revealed || c.flagged) return;
 
-        RevealCell(cellPos.x, cellPos.y);
+        RevealCell(cellPos.x, cellPos.y, true);
 
         board.Draw(state);
     }
-    private void RevealCell(int x, int y)
+    private void RevealCell(int x, int y, bool initialCall)
     {
         state[x, y].revealed = true;
+        if (initialCall)
+            AudioManager.Play(AudioManager.AudioType.GrassBreak);
         if (state[x, y].type == Cell.Type.Mine) Explode(x, y);
         if (state[x, y].type == Cell.Type.Empty)
         {
@@ -120,13 +126,14 @@ public class Game : MonoBehaviour
                 for (int yp = -1; yp <= 1; yp++)
                 {
                     int xpp = x + xp, ypp = y + yp;
-                    if (ValidCell(xpp, ypp) && !(xpp == x && ypp == y) && state[xpp, ypp].revealed == false) RevealCell(xpp, ypp);
+                    if (ValidCell(xpp, ypp) && !(xpp == x && ypp == y) && state[xpp, ypp].revealed == false) RevealCell(xpp, ypp, false);
                 }
             }
         }
     }
     private void Explode(int x, int y)
     {
+        AudioManager.Play(AudioManager.AudioType.Explode);
         gameOver = true;
         state[x, y].exploded = true;
 
@@ -147,6 +154,7 @@ public class Game : MonoBehaviour
 
         c.flagged = !c.flagged;
         state[cellPos.x, cellPos.y] = c;
+        AudioManager.Play(AudioManager.AudioType.WoodClick);
         board.Draw(state);
     }
     private Cell GetCell(int x, int y) {
@@ -159,6 +167,7 @@ public class Game : MonoBehaviour
     }
     private void CheckWin()
     {
+        if(gameOver) return;
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -169,15 +178,17 @@ public class Game : MonoBehaviour
         }
 
         gameOver = true;
+        AudioManager.Play(AudioManager.AudioType.ChallengeComplete);
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                if (state[x, y] .type == Cell.Type.Mine) 
+                if (state[x, y].type == Cell.Type.Mine) 
                 {
                     state[x, y].flagged = true;
                 }
             }
         }
+        board.Draw(state);
     }
 }

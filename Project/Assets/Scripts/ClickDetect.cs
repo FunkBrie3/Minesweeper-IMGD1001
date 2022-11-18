@@ -24,12 +24,15 @@ public class ClickDetect : MonoBehaviour
                 {
                     case "buttonPlay":
                         SceneManager.LoadScene("game");
+                        AudioManager.Play(AudioManager.AudioType.Click);
                         return;
                     case "buttonCredits":
                         SceneManager.LoadScene("credits");
+                        AudioManager.Play(AudioManager.AudioType.Click);
                         return;
                     case "buttonHistory":
                         SceneManager.LoadScene("version");
+                        AudioManager.Play(AudioManager.AudioType.Click);
                         return;
                     case "buttonQuit":
                         Application.Quit();

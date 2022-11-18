@@ -8,6 +8,8 @@ Game Controls:
 
 v0.0.1.0s2
 	- Added audio effects to game interactions.
+	- Modified splash screen and background color.
+	- Added logo.
 v0.0.1.0s1
 	- Intro screen created.
 	- Credits screen created.
