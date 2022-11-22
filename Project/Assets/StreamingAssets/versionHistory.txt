@@ -6,6 +6,9 @@ Game Controls:
 [Left Click] to reveal a tile
 [Right Click] to flag a mine
 
+v0.0.1.0s3
+	- Modified background texture.
+	- Modified in-game textures to match game theming.
 v0.0.1.0s2
 	- Added audio effects to game interactions.
 	- Modified splash screen and background color.

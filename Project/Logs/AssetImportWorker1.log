@@ -15,7 +15,7 @@ C:/Users/brieh/Documents/_IMGD 1001/Minesweeper-IMGD1001/Project
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51872
+59749
 Successfully changed project path to: C:/Users/brieh/Documents/_IMGD 1001/Minesweeper-IMGD1001/Project
 C:/Users/brieh/Documents/_IMGD 1001/Minesweeper-IMGD1001/Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/brieh/Documents/_IMGD 1001/Minesweeper-IMGD1001/Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 213.37 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 237.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.12f1 (8af3c3e441b1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,92 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56360
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011127 seconds.
+Registered in 0.012019 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 233.97 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 235.62 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.378 seconds
+- Completed reload, in  1.660 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1379ms)
-		BeginReloadAssembly (140ms)
+	ReloadAssembly (1662ms)
+		BeginReloadAssembly (193ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1022ms)
-			LoadAssemblies (135ms)
+		EndReloadAssembly (1219ms)
+			LoadAssemblies (184ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (186ms)
+			SetupTypeCache (260ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (678ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (763ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (23ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (234ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (323ms)
-				ProcessInitializeOnLoadMethodAttributes (100ms)
+				RefreshPlugins (236ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (382ms)
+				ProcessInitializeOnLoadMethodAttributes (118ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.017477 seconds.
+Registered in 0.023348 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\brieh\Documents\_IMGD 1001\Minesweeper-IMGD1001\Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\brieh\Documents\_IMGD 1001\Minesweeper-IMGD1001\Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 233.97 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 212.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.983 seconds
+- Completed reload, in  2.872 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2985ms)
-		BeginReloadAssembly (220ms)
+	ReloadAssembly (2874ms)
+		BeginReloadAssembly (281ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
+			DisableScriptedObjects (15ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (2506ms)
-			LoadAssemblies (179ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (2308ms)
+			LoadAssemblies (214ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (645ms)
+			SetupTypeCache (575ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (160ms)
-			SetupLoadedEditorAssemblies (1343ms)
+			RebuildScriptCaches (155ms)
+			SetupLoadedEditorAssemblies (1240ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (234ms)
-				BeforeProcessingInitializeOnLoad (275ms)
-				ProcessInitializeOnLoadAttributes (682ms)
-				ProcessInitializeOnLoadMethodAttributes (119ms)
-				AfterProcessingInitializeOnLoad (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (213ms)
+				BeforeProcessingInitializeOnLoad (248ms)
+				ProcessInitializeOnLoadAttributes (633ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (19ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 2.16 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.29 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4090 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (56.6 KB). Loaded Objects now: 4546.
 Memory consumption went from 153.9 MB to 153.8 MB.
-Total: 8.052700 ms (FindLiveObjects: 0.508700 ms CreateObjectMapping: 0.350200 ms MarkObjects: 6.987500 ms  DeleteObjects: 0.204500 ms)
+Total: 7.689500 ms (FindLiveObjects: 0.481800 ms CreateObjectMapping: 0.348500 ms MarkObjects: 6.660900 ms  DeleteObjects: 0.195400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,78 +163,35 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 365.699726 seconds.
-  path: Assets/Scripts/AudioManager.cs
-  artifactKey: Guid(8e9cc3ce6885bc247adc6c48950155ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AudioManager.cs using Guid(8e9cc3ce6885bc247adc6c48950155ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9983caefc215f0d8cb0877c8053781ea') in 0.057169 seconds 
+  Time since last request: 134395.403219 seconds.
+  path: Assets/Sprites/MC/tnt_top.asset
+  artifactKey: Guid(b552c346e68fef94c8e80ad38b68b4d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MC/tnt_top.asset using Guid(b552c346e68fef94c8e80ad38b68b4d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7938257449ff7f3ecf4a8c36ab424f8a') in 0.083741 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 85.929484 seconds.
-  path: Assets/Audio/gravel3.ogg
-  artifactKey: Guid(af1442f5000d5014c8450fa829a899c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/gravel3.ogg using Guid(af1442f5000d5014c8450fa829a899c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '153fa9f384c64e4d46c0fc5f524d6df3') in 0.303961 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/MC/obsidian.asset
+  artifactKey: Guid(46e3b819e9f343048a3d52f2c302e6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MC/obsidian.asset using Guid(46e3b819e9f343048a3d52f2c302e6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81c6434ba4413d5578808dff1a43c73') in 0.012432 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Audio/snow4.ogg
-  artifactKey: Guid(1fcf48484206c4d47aca8792f5d3bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/snow4.ogg using Guid(1fcf48484206c4d47aca8792f5d3bb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c114cc533a2d32ebe2fb0e684ffc7e02') in 0.035394 seconds 
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprites/MC/netherrack.asset
+  artifactKey: Guid(2bcf310bb7fbca041a8cb84acd6fb931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MC/netherrack.asset using Guid(2bcf310bb7fbca041a8cb84acd6fb931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0736077c76574cef67ec42d09d33d43') in 0.013409 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Audio/snow2.ogg
-  artifactKey: Guid(29cef3c2e9e425349ad0714140f7e43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/snow2.ogg using Guid(29cef3c2e9e425349ad0714140f7e43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd211c59f5dc903b876cac0512ef3370f') in 0.033779 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/MC/MCFlag.asset
+  artifactKey: Guid(5ce37dd48864cc14b83ade15c44be3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MC/MCFlag.asset using Guid(5ce37dd48864cc14b83ade15c44be3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdee323c7a18f55a93c239844bb10fd2') in 0.013104 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Audio/launch1.ogg
-  artifactKey: Guid(5736a8060e953444c9ad7ad82df2dad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/launch1.ogg using Guid(5736a8060e953444c9ad7ad82df2dad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dfb04c59b05bb5eb7817f2a1bf7570d') in 0.031113 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Audio/stone2.ogg
-  artifactKey: Guid(929b74c4aa559674da2dfefb604607e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/stone2.ogg using Guid(929b74c4aa559674da2dfefb604607e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4f806cc9ad02f8465a23aff9a283924') in 0.032212 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Audio/gravel4.ogg
-  artifactKey: Guid(000b9a5dbb4a8114687c4ac4a81f48b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/gravel4.ogg using Guid(000b9a5dbb4a8114687c4ac4a81f48b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48b4e806c4ac3724d92b1b7b5f0ce452') in 0.029087 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Audio/stone3.ogg
-  artifactKey: Guid(651531c72aea20e4f9c420a40926f5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/stone3.ogg using Guid(651531c72aea20e4f9c420a40926f5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11b62118bcc3eed293920fa3de0c502d') in 0.032164 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Audio/stone1.ogg
-  artifactKey: Guid(998e154d28fdbfa4f974b81cca9db330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/stone1.ogg using Guid(998e154d28fdbfa4f974b81cca9db330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cf7256bf788f79faa74c4bbbb86ba85') in 0.034353 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000094 seconds.
-  path: Assets/Audio/wood1.ogg
-  artifactKey: Guid(b96c9f506bc3f7a419098d63dc5bdfbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/wood1.ogg using Guid(b96c9f506bc3f7a419098d63dc5bdfbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1746194a995355226b915faaad804cbd') in 0.034079 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Audio/sand1.ogg
-  artifactKey: Guid(4d80845f71285f146a663291d0fa1758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/sand1.ogg using Guid(4d80845f71285f146a663291d0fa1758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '851c4364e0be532128199788f2cf3d91') in 0.031675 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Audio/twinkle1.ogg
-  artifactKey: Guid(98b5ca8daa325704e8f6545e7a9786c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/twinkle1.ogg using Guid(98b5ca8daa325704e8f6545e7a9786c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e682516dffc00bbf3d6aa809d1e2788') in 0.029792 seconds 
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/MC/magma.asset
+  artifactKey: Guid(a4b01bea016a65d4aba1caf8316f35d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MC/magma.asset using Guid(a4b01bea016a65d4aba1caf8316f35d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '948ab06cda98aa65fec280f96dff1a27') in 0.012920 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

@@ -13,7 +13,8 @@ public struct Cell
     public bool revealed, flagged, exploded;
 
     private Tile LoadRsrc(string id) {
-        return Resources.Load<Tile>("Tiles/Tile" + id);
+        //return Resources.Load<Tile>("Tiles/Tile" + id);
+        return Resources.Load<Tile>("Tiles/MCTile/Tile" + id);
     }
     public Tile GetTile() {
         if (revealed)
