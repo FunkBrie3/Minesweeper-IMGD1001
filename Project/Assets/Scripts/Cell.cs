@@ -12,7 +12,7 @@ public struct Cell
     public int number;
     public bool revealed, flagged, exploded;
 
-    private Tile LoadRsrc(string id) {
+    public static Tile LoadRsrc(string id) {
         //return Resources.Load<Tile>("Tiles/Tile" + id);
         Tile t = ScriptableObject.CreateInstance<Tile>();
         t.sprite = Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/Tile" + id);

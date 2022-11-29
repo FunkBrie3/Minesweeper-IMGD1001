@@ -13,6 +13,61 @@ public class Game : MonoBehaviour
         height = GlobalVars.height;
         mineCount = GlobalVars.mineCount;
         board = GetComponentInChildren<Board>();
+
+        GameObject bgBetter = new GameObject("bg");
+        bgBetter.transform.parent = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        bgBetter.AddComponent<SpriteRenderer>().sprite =
+            Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/TileUnknown");
+        bgBetter.transform.localPosition = new Vector3(0, 0, 120);
+        
+        SpriteRenderer r = bgBetter.GetComponent<SpriteRenderer>();
+        r.drawMode = SpriteDrawMode.Tiled;
+        r.size = new Vector2(50, 30);
+        
+        for(int i = 0; i < 4; i++) {
+            GameObject o = new GameObject($"line{i}");
+            o.AddComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/TileUnknown");
+            o.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+            if(i < 2) {
+            o.transform.position = new Vector3(i * width, (height / 2f), -9);
+                o.transform.localScale = new Vector3(0.15f, height, 0);
+            } else {
+                o.transform.position = new Vector3((width / 2f), (i - 2) * height, -9);
+                o.transform.localScale = new Vector3(width, 0.15f, 0);
+            }
+        }
+
+        if(GlobalVars.isLined) {
+            for(int j = 0; j < width - 1; j++) {
+                GameObject o = new GameObject($"lineW{j}");
+                o.AddComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/TileUnknown");
+                o.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0, 0);
+
+                o.transform.position = new Vector3((width / 2f), (j + 1), -8);
+                o.transform.localScale = new Vector3(width, 0.05f, 0);
+            }
+
+            for(int k = 0; k < height - 1; k++) {
+                GameObject o = new GameObject($"lineW{k}");
+                o.AddComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/TileUnknown");
+                o.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0, 0);
+
+                o.transform.position = new Vector3((k + 1), (height / 2f), -8);
+                o.transform.localScale = new Vector3(0.05f, height, 0);
+            }
+        } else {
+            for(int j = 0; j < width; j++) {
+                for(int k = 0; k < height; k++) {
+                    bool col = (j + k) % 2 == 0;
+                    if(col) {
+                        GameObject o = new GameObject($"tile{j}/{k}");
+                        o.AddComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprite/Square");
+                        o.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0.2f);
+                        o.transform.position = new Vector3(j + 0.5f, k + 0.5f, -8);
+                    }
+                }
+            }
+        }
     }
 
     private void Start()
@@ -27,7 +82,7 @@ public class Game : MonoBehaviour
         GenerateCells();
         GenerateMines();
         GenerateNumbers();
-        Camera.main.transform.position = new Vector3(width / 2f, height / 2f, -10);
+        Camera.main.transform.position = new Vector3(width / 2f, height / 2f, -100);
         board.Draw(state);
 
         AudioManager.Play(AudioManager.AudioType.Pop);
@@ -139,6 +194,13 @@ public class Game : MonoBehaviour
         AudioManager.Play(AudioManager.AudioType.Explode);
         gameOver = true;
         state[x, y].exploded = true;
+
+        for(int i = 0; i < 5; i++) {
+            GameObject o = Resources.Load<GameObject>("Prefab/particleExplode");
+            o.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(-2.5f, 2.5f), 0);
+            o.transform.position = new Vector3(o.transform.position.x, o.transform.position.y, -10);
+            Instantiate(o);
+        }
 
         for (int xp = 0; xp < width; xp++)
         {
