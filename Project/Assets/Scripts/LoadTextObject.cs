@@ -21,14 +21,14 @@ public class LoadTextObject : MonoBehaviour
         {
             GameObject obj = new GameObject(s);
             obj.transform.parent = this.gameObject.transform;
-            obj.transform.localPosition = new Vector3(9, -i);
+            obj.transform.localPosition = new Vector3(0, -i);
             obj.AddComponent<MeshRenderer>();
             obj.AddComponent<TextMesh>();
             TextMesh textMesh = obj.GetComponent<TextMesh>();
             textMesh.text = s;
             textMesh.characterSize = 0.1f;
             textMesh.fontSize = 50;
-            textMesh.anchor = TextAnchor.UpperCenter;
+            //textMesh.anchor = TextAnchor.UpperCenter;
             i++;
         }
     }

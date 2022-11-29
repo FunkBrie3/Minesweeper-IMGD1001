@@ -9,6 +9,9 @@ public class Game : MonoBehaviour
     private bool gameOver;
     private void Awake()
     {
+        width = GlobalVars.width;
+        height = GlobalVars.height;
+        mineCount = GlobalVars.mineCount;
         board = GetComponentInChildren<Board>();
     }
 

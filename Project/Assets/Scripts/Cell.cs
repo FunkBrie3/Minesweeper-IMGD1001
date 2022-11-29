@@ -14,7 +14,9 @@ public struct Cell
 
     private Tile LoadRsrc(string id) {
         //return Resources.Load<Tile>("Tiles/Tile" + id);
-        return Resources.Load<Tile>("Tiles/MCTile/Tile" + id);
+        Tile t = ScriptableObject.CreateInstance<Tile>();
+        t.sprite = Resources.Load<Sprite>($"Sprite/{GlobalVars.GetThemeDirectory()}/Tile" + id);
+        return t;
     }
     public Tile GetTile() {
         if (revealed)

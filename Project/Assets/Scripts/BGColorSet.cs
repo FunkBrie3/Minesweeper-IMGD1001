@@ -6,7 +6,6 @@ public class BGColorSet : MonoBehaviour
 {
     void Awake()
     {
-        GetComponent<Camera>().backgroundColor = GlobalVars.bgcolor;
         GameObject o = new GameObject("skybox");
         o.transform.localScale = Vector3.one * 2;
         o.transform.position = new Vector3(0, 0, 100);
