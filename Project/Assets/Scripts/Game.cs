@@ -7,6 +7,10 @@ public class Game : MonoBehaviour
     private Board board;
     private Cell[,] state;
     private bool gameOver;
+    private bool firstClick;
+    [SerializeField] private GameObject timer;
+    private float timerRaw;
+    private int timeSec, timeMin, timeHr;
     private void Awake()
     {
         width = GlobalVars.width;
@@ -72,12 +76,18 @@ public class Game : MonoBehaviour
 
     private void Start()
     {
-        NewGame();
+        NewGame(false);
     }
 
-    private void NewGame()
+    public void NewGame(bool recursiveRestart)
     {
+        timerRaw = 0;
+        timeSec = 0;
+        timeMin = 0;
+        timeHr = 0;
+
         gameOver = false;
+        firstClick = true;
         state = new Cell[width, height];
         GenerateCells();
         GenerateMines();
@@ -85,7 +95,7 @@ public class Game : MonoBehaviour
         Camera.main.transform.position = new Vector3(width / 2f, height / 2f, -100);
         board.Draw(state);
 
-        AudioManager.Play(AudioManager.AudioType.Pop);
+        if(!recursiveRestart) AudioManager.Play(AudioManager.AudioType.Pop);
     }
 
     private void GenerateCells() {
@@ -158,7 +168,28 @@ public class Game : MonoBehaviour
 
         CheckWin();
 
-        if (Input.GetKeyDown(KeyCode.R)) NewGame();
+        if (Input.GetKeyDown(KeyCode.R)) NewGame(false);
+
+        if(!firstClick && !gameOver) {
+            timerRaw += Time.deltaTime;
+            if(timerRaw >= 1) {
+                timerRaw--;
+                timeSec++;
+                if(timeSec >= 60) {
+                    timeSec-=60;
+                    timeMin++;
+                    if(timeMin >= 60) {
+                        timeMin-=60;
+                        timeHr++;
+                    }
+                }
+            }
+
+            string min = timeMin < 10 ? "0" + $"{timeMin}" : timeMin.ToString();
+            string sec = timeSec < 10 ? "0" + $"{timeSec}" : timeSec.ToString();
+            timer.GetComponent<TextMesh>().text = 
+                $"{timeHr}:{min}:{sec}";
+        } else timer.GetComponent<TextMesh>().text = "0:00:00";
     }
     public void Reveal()
     {
@@ -166,6 +197,14 @@ public class Game : MonoBehaviour
         Vector3Int cellPos = board.tilemap.WorldToCell(worldPos);
         Cell c = GetCell(cellPos.x, cellPos.y);
         if (c.type == Cell.Type.Invalid || c.revealed || c.flagged) return;
+
+        if(c.type != Cell.Type.Empty && firstClick) {
+            NewGame(true);
+            Reveal();
+            return;
+        }
+
+        firstClick = false;
 
         RevealCell(cellPos.x, cellPos.y, true);
 
@@ -242,6 +281,7 @@ public class Game : MonoBehaviour
             }
         }
 
+        //Win
         gameOver = true;
         AudioManager.Play(AudioManager.AudioType.ChallengeComplete);
         for (int x = 0; x < width; x++)
@@ -254,6 +294,19 @@ public class Game : MonoBehaviour
                 }
             }
         }
+
+        for(float i = 0; i <= 0.5f; i += 0.1f)
+        Invoke("ParticleWin", i);
+
         board.Draw(state);
+    }
+
+    void ParticleWin() {
+        for(int i = 0; i < 3; i++) {
+            GameObject o = Resources.Load<GameObject>("Prefab/particleWin");
+            o.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), 0);
+            o.transform.position = new Vector3(o.transform.position.x, o.transform.position.y, -10);
+            Instantiate(o);
+        }
     }
 }

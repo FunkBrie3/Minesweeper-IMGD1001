@@ -1,11 +1,18 @@
-[Esc] to exit back to main menu
 [Up/Down Arrow] to scroll text
 
-Game Controls:
-[R] to restart
-[Left Click] to reveal a tile
-[Right Click] to flag a mine
-
+v0.0.1.0s5
+	- Added a trumbus indicator for selected theme.
+	- Added particle effects for the win condition.
+	- Added a bomb count during the game.
+	- Moved game controls to a different menu.
+	- Added an in-game timer.
+	- Added a how to play menu.
+v0.0.1.0s4
+	- Every first click is now an empty space.
+	- Explosion effects added when a bomb explodes.
+	- Added checkerboard to distinguish different tiles.
+	- Added a main menu and restart button to the game.
+	- Added indicator when hovering over buttons.
 v0.0.1.0s3
 	- Modified background texture.
 	- Modified in-game textures to match game theming.

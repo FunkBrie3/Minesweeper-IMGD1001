@@ -1,0 +1,15 @@
+[Up/Down Arrow] to scroll text
+
+Controls 
+- left click: clears the box
+- right click: flags the box
+- r: restarts the game 
+- esc: exits the game 
+
+Hints
+- each number in a cleared box explains how many bombs that box is touching
+   - bombs can touch on both the sides and the corners of the box 
+   - the max number of bombs one box can touch is 8
+
+Goal
+- clear the entire board without hitting any bombs

@@ -20,6 +20,10 @@ public class MenuClickDetect : MonoBehaviour
                         SceneManager.LoadScene("game");
                         AudioManager.Play(AudioManager.AudioType.Click);
                         return;
+                    case "buttonHowTo":
+                        SceneManager.LoadScene("howToPlay");
+                        AudioManager.Play(AudioManager.AudioType.Click);
+                        return;
                     case "buttonCredits":
                         SceneManager.LoadScene("credits");
                         AudioManager.Play(AudioManager.AudioType.Click);

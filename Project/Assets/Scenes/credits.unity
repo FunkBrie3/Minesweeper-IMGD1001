@@ -284,6 +284,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2433148302271186183, guid: 3c0015da5a4bb374f931d2d41ecd8716, type: 3}
@@ -335,4 +336,24 @@ PrefabInstance:
       value: buttonMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0015da5a4bb374f931d2d41ecd8716, type: 3}
+--- !u!1 &1491353368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7614187664639799534, guid: 3c0015da5a4bb374f931d2d41ecd8716, type: 3}
+  m_PrefabInstance: {fileID: 1491353367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491353369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491353368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2300a9c8e254541b2565c0891dfec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 21300000, guid: 77e698640b2d85c43a9d514d5d36a2c4, type: 3}
+  textL: {fileID: 21300000, guid: 38738daceb3f66345a09b34adb3bf651, type: 3}

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 491098966}
   - component: {fileID: 491098963}
   m_Layer: 0
-  m_Name: versionText
+  m_Name: howToText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3410a3347fc94ad42acab44ed2d4655b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: versionHistory
+  name: howToPlay
   scrollSpeed: 4
 --- !u!4 &491098966
 Transform:

@@ -1,4 +1,3 @@
-[Esc] to exit back to main menu
 [Up/Down Arrow] to scroll text
 
 For IMGD1001 at Worcester Polytechnic Institute
